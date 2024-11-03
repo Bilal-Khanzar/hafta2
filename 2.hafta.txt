@@ -1,0 +1,109 @@
+1.sor u 
+
+
+Console.Write("Bir sayı giriniz: ");
+int sayi = Convert.ToInt32(Console.ReadLine());
+
+if (sayi % 2 == 0)
+{
+    Console.WriteLine("Girilen sayı çift.");
+}
+else
+{
+    Console.WriteLine("Girilen sayı tek.");
+}
+
+
+
+2.soru 
+
+Console.Write("Bir sayı giriniz (1-10): ");
+int sayi = Convert.ToInt32(Console.ReadLine());
+
+switch (sayi)
+{
+    case 1:
+        Console.WriteLine("BİR");
+        break;
+    case 2:
+        Console.WriteLine("İKİ");
+        break;
+    case 3:
+        Console.WriteLine("ÜÇ");
+        break;
+    case 4:
+        Console.WriteLine("DÖRT");
+        break;
+    case 5:
+        Console.WriteLine("BEŞ");
+        break;
+    case 6:
+        Console.WriteLine("ALTI");
+        break;
+    case 7:
+        Console.WriteLine("YEDİ");
+        break;
+    case 8:
+        Console.WriteLine("SEKİZ");
+        break;
+    case 9:
+        Console.WriteLine("DOKUZ");
+        break;
+    case 10:
+        Console.WriteLine("ON");
+        break;
+    default:
+        Console.WriteLine("Geçersiz sayı. Lütfen 1-10 arasında bir sayı giriniz.");
+        break;
+}
+
+
+
+
+3.soru  
+
+
+Console.Write("Kullanıcı Adı: ");
+string kullaniciAdi = Console.ReadLine();
+
+Console.Write("Şifre: ");
+string sifre = Console.ReadLine();
+
+if (kullaniciAdi == "admin" && sifre == "Admin_32453@")
+{
+    Console.WriteLine("Giriş başarılı.");
+}
+else
+{
+    Console.WriteLine("Giriş başarısız.");
+}
+
+
+
+
+4.soru
+
+
+Console.Write("Sıcaklık değerini giriniz: ");
+int sicaklik = Convert.ToInt32(Console.ReadLine());
+
+if (sicaklik >= 10 && sicaklik < 20)
+{
+    Console.WriteLine("Normal");
+}
+else if (sicaklik >= 20 && sicaklik < 30)
+{
+    Console.WriteLine("Sıcak");
+}
+else if (sicaklik >= 30 && sicaklik <= 40)
+{
+    Console.WriteLine("Çok Sıcak");
+}
+else
+{
+    Console.WriteLine("Geçersiz sıcaklık değeri.");
+}
+
+
+
+
