@@ -1,0 +1,266 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> numbers = new List<int> { 10, 20, 30, 40, 50 };
+        int sum = 0;
+
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+            sum += number;
+        }
+
+        Console.WriteLine("Toplam: " + sum);
+    }
+}
+
+
+
+
+2.
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Bir cümle giriniz: ");
+        string sentence = Console.ReadLine();
+
+        string[] words = sentence.Split(' ');
+        int wordCount = words.Length;
+
+        Console.WriteLine("Kelime sayısı: " + wordCount);
+    }
+}
+
+
+
+3
+
+
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main()
+    {
+        ArrayList names = new ArrayList();
+
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("Bir isim giriniz: ");
+            string name = Console.ReadLine();
+            names.Add(name);
+        }
+
+        names.Sort();
+
+        Console.WriteLine("Alfabetik sıralama:");
+        foreach (string name in names)
+        {
+            Console.WriteLine(name);
+        }
+    }
+}
+
+
+
+
+4
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Bir sayı giriniz: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int a = 0, b = 1;
+
+        Console.Write("Fibonacci Serisi: ");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write(a + " ");
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+    }
+}
+
+
+
+
+
+5
+
+
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Random random = new Random();
+        int target = random.Next(1, 101); // 1 ile 100 arasında rastgele bir sayı
+        int guess = 0;
+
+        Console.WriteLine("1 ile 100 arasında bir sayı tahmin edin:");
+
+        while (guess != target)
+        {
+            Console.Write("Tahmininiz: ");
+            guess = int.Parse(Console.ReadLine());
+
+            if (guess < target)
+            {
+                Console.WriteLine("Daha büyük bir sayı tahmin edin.");
+            }
+            else if (guess > target)
+            {
+                Console.WriteLine("Daha küçük bir sayı tahmin edin.");
+            }
+            else
+            {
+                Console.WriteLine("Tebrikler! Doğru tahmin ettiniz.");
+            }
+        }
+    }
+}
+
+
+
+
+
+
+6
+
+
+
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string operation;
+        do
+        {
+            Console.Write("İşlem türünü giriniz (+, -, *, /) veya çıkış yazınız: ");
+            operation = Console.ReadLine();
+
+            if (operation == "çıkış")
+                break;
+
+            Console.Write("Birinci sayıyı giriniz: ");
+            double num1 = double.Parse(Console.ReadLine());
+
+            Console.Write("İkinci sayıyı giriniz: ");
+            double num2 = double.Parse(Console.ReadLine());
+
+            double result = 0;
+
+            switch (operation)
+            {
+                case "+":
+                    result = num1 + num2;
+                    Console.WriteLine("Sonuç: " + result);
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    Console.WriteLine("Sonuç: " + result);
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    Console.WriteLine("Sonuç: " + result);
+                    break;
+                case "/":
+                    if (num2 != 0)
+                    {
+                        result = num1 / num2;
+                        Console.WriteLine("Sonuç: " + result);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Hata: Sıfıra bölme yapılamaz.");
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Geçersiz işlem.");
+                    break;
+            }
+        } while (operation != "çıkış");
+    }
+}
+
+
+
+
+
+
+
+7
+
+
+
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> numbers = new List<int>();
+        int input;
+
+        Console.WriteLine("Pozitif tam sayılar giriniz (Çıkmak için 0 giriniz):");
+
+        while (true)
+        {
+            input = int.Parse(Console.ReadLine());
+
+            if (input == 0)
+                break;
+            
+            if (input > 0)
+                numbers.Add(input);
+            else
+                Console.WriteLine("Lütfen pozitif bir sayı giriniz.");
+        }
+
+        int sum = 0;
+        foreach (int number in numbers)
+        {
+            sum += number;
+        }
+
+        Console.WriteLine("Girilen pozitif sayıların toplamı: " + sum);
+
+        Console.WriteLine("Girilen pozitif sayılar:");
+        for (int i = 0; i < numbers.Count; i++)
+        {
+            Console.WriteLine(numbers[i]);
+        }
+    }
+}
+
+
